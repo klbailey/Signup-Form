@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign-up Form</title>
+		<link rel ="stylesheet" type="text/css" href="styles.css"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="img">
+			<!-- dark band to assist in logo readability -->
+			<div class="img-dark">
+				<div class="imgLogo">
+					<img src="./assets/odin-lined.png" alt="Odin Logo" class="odinImg"/>
+					<h1>ODIN</h1>
+				</div>
+			</div>
+			<div class="img-description">
+				<p class="img-info">Photo by David Troeger</p>
+				<a href="https://unsplash.com/photos/9XzyEzPAHMI">
+					<p class="img-info">https://unsplash.com/photos/9XzyEzPAHMI</p>
+				</a>
+			</div>
+		</div>
+		<div class="form">
+			<div class="form-info">
+				<!-- &nbsp adds space between italic word and non-italic word  -->
+				<h1>This is not a real online service! You know you need something like this in 
+					your life to help you realize your deepest dreams. Sign up <i>now</i>&nbsp to get started.<br /><br />
+					You <i>know</i>&nbsp you want to.<br>
+				</h1>
+			</div>
+			<form action="">
+				<h2>Let's do this!</h2>
+				<div class="inputs">
+					<div class="firstName">
+						<label for="firstName" class="formLabel">First name</label>
+						<input required type="text" class="formInput" id="firstName"><br />
+					</div>
+					<div class="lastName">
+						<label for="lastName" class="formLabel">Last name</label>
+						<input required type="text" class="formInput" id="lastName"/>
+					</div>
+				</div>
+				<div class="inputs">
+					<div class="email">
+						<label for="email" class="formLabel">Email</label>
+						<input required type="text" class="formInput" id="email"><br />
+					</div>
+					<div class="phone">
+						<label for="phone" class="formLabel">Phone Number</label>
+						<input required type="text" class="formInput" id="phone"/>						
+					</div>
+				</div>
+				<div class="inputs">
+					<div class="password">
+						<label for="password" class="formLabel">Password</label>
+						<input required type="text" class="formInput" id="password"/>
+					</div>
+					<div class="confirm">
+						<label for="confirm" class="formLabel">Confirm Password</label>
+						<input required type="text" class="formInput" id="confirm"/>
+					</div>
+				</div>
+				<div class="errorMessage">* Passwords must match with at least 7 characters, 1 number and 1 upper case letter<br /><br /></div>
+				<div class="formEnd">
+					<button class="btn" type="submit">Create Account</button>
+					<h1>Already have an account? <a href="" class="login">Log in</a></h1>
+				</div>
+			</form>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>

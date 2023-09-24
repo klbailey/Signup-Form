@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@700&display=swap');
+
+body {
+	font-family: 'Barlow', sans-serif;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(44, 128, 128);
+}
+
+.img {
+	display: flex;
+	width: 40%;
+	height: 95%;
+	margin: 1% 0% 1% 1%;
+	/* No-repeat center places background image in the element but only show one instance of it */
+	background: url(./assets/david-troeger-9XzyEzPAHMI-unsplash.jpg) no-repeat center;
+	/* Preserves intrinsic proportions, image is rendered at largest size within
+	or covering background positioning area */
+	background-size: cover;
+	align-content: center;
+	justify-content: center;
+	border: 1px solid black;
+	/* rounded corners */
+	border-radius: 5px;
+	position: relative;
+}
+
+.img-description {
+	/* The browser calculates a top margin */
+	margin-top: auto;
+	margin-bottom: 10px;
+	font-size: 100%;
+	font-weight: 900; 
+	color: rgb(208, 246, 246);
+}
+
+/* Delete purple font and underline on url anchor tag; 
+inherits color from parent .img-description */
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.form {
+	width: 60%;
+	margin: 1% 3% 1% 0%;
+	padding: 0;
+	border: 1px solid black;
+	/* rounded corners */
+	border-radius: 5px;
+	height: 95%;
+	background-color: rgb(236, 248, 248);
+}
+
+/* Children of form */
+.form > * {
+	padding-left: 5%;
+	padding-right: 3%; 
+}
+
+.formLabel {
+	display: block;
+	font-size: 20px;
+	font-weight: 900;
+	/* add transition 0.5 seconds   */
+	transition: all 0.5s;
+	transform: translateY(-3.1 rem)
+}
+
+.formInput {
+	border: 2px solid grey;
+	color: #333;
+	font-size: 1.2 rem;
+	padding: 0.2rem 0.2rem;
+	border-radius: 0.2rem;
+	width: 100%;
+	display: block;
+	transition: all 0.5s;
+	margin-top: 5%; 
+	padding-right: 10%;
+}
+
+/* Once clicked it'll focus that element and transition */
+.formInput:focus {
+	transition: 0.2s;
+	outline: none;
+	border: 2px solid green;
+}
+
+/* Grab form input */
+.formInput:placeholder-shown + .formLabel {
+	opacity: 0;
+	visibility: hidden;
+}
+
+form {
+	padding-top: 4%;
+	width: 92%;
+	margin-left: 0%;
+	margin-right: 0%;
+	background-color: rgb(228, 244, 244);
+	box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.25); /*Shadow at the bottom of input box */
+}
+
+.form-info h1 {
+	margin-top: 175px;
+}
+
+.inputs {
+	display: flex;
+	flex-direction: row;
+	width: 90%;
+}
+
+.inputs > :last-child {
+	padding-left: 10%;
+	padding-bottom: 1.2%;
+}
+
+.formEnd {
+  margin-top: 20px;
+  position: absolute;
+  font-size: 10px;
+}
+
+/*Shadow on button when hovered see https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_shadow */
+.btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 30px;
+	border-radius: 5px;
+	border: none;
+	font-size: 25px;
+	color: white;
+	background: rgb(5, 84, 84);
+	user-select: none;  /*Text of element cannot be selected*/
+	touch-action: manipulation; /*Enable panning/pinch but disable double-tap to zoom*/
+	cursor: pointer; /*Shows when moust pointer is over the element (button) */
+	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;
+}
+
+.btn:hover {
+	outline: 0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.login {
+	color: rgb(136, 203, 203);
+}
+
+.error {
+	border: 2px dashed red;
+ }
+
+ .errorMessage {
+	font-size: 15px;
+	font-weight: 900;
+	color: red;
+	margin-top: 0.5px;
+	margin-bottom: 10px;
+ }
+
+ .imgLogo {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: center;	
+ }
+
+ .imgLogo img {
+	width: 5rem;
+	height: auto;
+	margin: 20px; 
+ }
+
+.img h1 {
+	font-family: Skranji;
+	align-self: center;
+	color: white;
+	font-size: 5rem;
+} 
+
+ /*Dark band behind logo and ODIN text************************* */
+ /*With position absolute here and parent position relative it expands band behind logo and h1 */
+ .img-dark {
+    flex-grow: 1;
+    height: fit-content; 
+    background-color: rgba(0, 0, 0, 0.100);
+    line-height: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	position: absolute;
+	margin-top: 45%;
+	width: 100%;
+}
